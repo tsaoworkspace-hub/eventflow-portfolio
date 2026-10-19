@@ -1,0 +1,108 @@
+:root {
+  color: #17201d;
+  background: #f4f6f2;
+  font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(169, 196, 184, .28), transparent 28rem),
+    #f4f6f2;
+}
+
+a { color: inherit; }
+
+.portfolio-header {
+  position: sticky;
+  z-index: 1050;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 76px;
+  padding: .8rem clamp(1rem, 4vw, 4rem);
+  border-bottom: 1px solid rgba(23, 32, 29, .1);
+  background: rgba(250, 251, 248, .94);
+  backdrop-filter: blur(16px);
+}
+
+.portfolio-brand {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  min-width: max-content;
+  text-decoration: none;
+}
+
+.portfolio-brand > span:last-child { display: grid; }
+.portfolio-brand strong { font-size: 1.05rem; letter-spacing: .03em; }
+.portfolio-brand small { color: #6b756f; font-size: .68rem; }
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 13px;
+  color: #fff;
+  background: #203d34;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.portfolio-nav {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: .25rem;
+  overflow-x: auto;
+}
+
+.portfolio-nav a {
+  padding: .55rem .75rem;
+  border-radius: 999px;
+  color: #58635f;
+  font-size: .87rem;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.portfolio-nav a:hover,
+.portfolio-nav a.router-link-active {
+  color: #17372d;
+  background: #e1ebe5;
+}
+
+.demo-badge {
+  min-width: max-content;
+  padding: .35rem .55rem;
+  border: 1px solid #afbed2;
+  border-radius: 6px;
+  color: #43576f;
+  font: 700 .67rem/1 system-ui, sans-serif;
+  letter-spacing: .09em;
+}
+
+.portfolio-footer {
+  padding: 2.5rem 1rem;
+  color: #66716c;
+  background: #e9ede8;
+  text-align: center;
+  font-size: .82rem;
+}
+
+.portfolio-footer p { margin: .3rem 0; }
+
+@media (max-width: 900px) {
+  .portfolio-header { flex-wrap: wrap; gap: .7rem; }
+  .portfolio-nav { order: 3; justify-content: flex-start; width: 100%; }
+  .demo-badge { margin-left: auto; }
+}
